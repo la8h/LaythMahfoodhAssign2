@@ -1,4 +1,6 @@
 <!-- Layth Mahfoodh s991523983 PROG38448 -->
 <resources>
     <string name="app_name">Layth Mahfoodh s991523983 </string>
+    <string name="laythTV">Pizza restaurants</string>
+    <string name="chooseRest">Choose one of the restaurants</string>
 </resources>
