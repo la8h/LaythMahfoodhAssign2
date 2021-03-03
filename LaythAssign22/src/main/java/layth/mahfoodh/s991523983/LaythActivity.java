@@ -6,20 +6,32 @@ package layth.mahfoodh.s991523983;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class LaythActivity extends AppCompatActivity {
+    private Button btnNext;
+    RadioButton rBtnPizzaPizza, rBtnPizzaNova, rBtnPizzaHut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btnNext = findViewById(R.id.btnNext);
+        rBtnPizzaPizza = (RadioButton)findViewById(R.id.rBtnPizzaPizza);
+        rBtnPizzaNova = (RadioButton)findViewById(R.id.rBtnPizzaNova);
+        rBtnPizzaHut = (RadioButton)findViewById(R.id.rBtnPizzaHut);
     }
 
     @Override
@@ -51,6 +63,8 @@ public class LaythActivity extends AppCompatActivity {
             case R.id.name:
                 Toast.makeText(this, "This is a pizza restaurants app!", Toast.LENGTH_LONG).show();
                 break;
+
+
 /*
             case R.id.stop:
                 Toast.makeText(this, "You selected stop!", Toast.LENGTH_SHORT).show();
@@ -70,4 +84,64 @@ public class LaythActivity extends AppCompatActivity {
         return true;
 
     }
+
+    public void callAction(View view) {
+        Intent intent = null;
+        if(rBtnPizzaPizza.isChecked()==true){
+            intent = new Intent(this, MahfoodhActivity2.class);
+                startActivity(intent);
+        }
+        else if(rBtnPizzaPizza.isChecked()==true){
+            intent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.cp24.ca/"));
+            startActivity(intent);
+        }
+        else{
+            intent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.cbc.ca/"));
+            startActivity(intent);
+        }
+
+        //   public void onRadioButtonClicked(View view){
+        //  boolean checked = ((RadioButton) view).isChecked();
+       //    intent = new Intent(this, MahfoodhActivity2.class);
+       //    startActivity(intent);
+
+    }
+
+     //   }
+   // }
+/*
+    public void onRadioButtonClicked(View view) {
+    // Is the button now checked?
+    boolean checked = ((RadioButton) view).isChecked();
+
+    // Check which radio button was clicked
+        Intent intent = null;
+    switch(view.getId()) {
+        case R.id.rBtnPizzaPizza:
+            if (checked)
+                intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://www.dominos.ca/"));
+            startActivity(intent);
+            break;
+        case R.id.rBtnPizzaNova:
+            if (checked)
+                intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://www.cp24.ca/"));
+            startActivity(intent);
+            break;
+        case R.id.rBtnPizzaHut:
+            if (checked)
+                intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://www.cbc.ca/"));
+            startActivity(intent);
+                break;
+
+    }
+
+}
+*/
+
+
 }

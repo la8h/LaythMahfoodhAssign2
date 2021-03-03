@@ -41,7 +41,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rBtnPizzaPizza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pizza Pizza"
@@ -54,7 +54,7 @@
 
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rBtnPizzaNova"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pizza Nova"
@@ -66,7 +66,7 @@
             app:layout_constraintVertical_bias="0.472" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rBtnPizzaHut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
@@ -112,6 +112,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.479"
         app:srcCompat="@drawable/pizza_hut" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="callAction"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintStart_toStartOf="@+id/rdbGp1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.811" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
